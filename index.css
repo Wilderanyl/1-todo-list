@@ -84,6 +84,69 @@ body .container .project-container .content {
   padding: 10px;
   color: #f0dc4e;
 }
+body .container .project-container .content .form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 40px;
+}
+body .container .project-container .content .form input {
+  flex: 1;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+body .container .project-container .content .form button {
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: #f0dc4e;
+  color: #2e302c;
+  font-weight: bold;
+  cursor: pointer;
+}
+body .container .project-container .content ul {
+  margin-top: 20px;
+  list-style: none;
+}
+body .container .project-container .content ul .checked {
+  text-decoration: line-through;
+  border-bottom: 1px solid green;
+}
+body .container .project-container .content ul li {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f0dc4e;
+  border-bottom: 1px solid #f0dc4e;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+body .container .project-container .content ul li .icon {
+  overflow: hidden;
+}
+body .container .project-container .content ul li .icon span {
+  margin-left: 10px;
+  color: #2e302c;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+}
+body .container .project-container .content ul li .icon span:nth-child(1) {
+  background-color: green;
+}
+body .container .project-container .content ul li .icon span:nth-child(2) {
+  background-color: red;
+}
 body .footer {
   border-top: 1px solid #2e302c;
   text-align: center;
