@@ -1,7 +1,6 @@
 const inputBox = document.getElementById("input");
 const buttonBox = document.getElementById("button");
 const todoList = document.getElementById("todo-list");
-const emptyList = document.querySelector(".empty");
 const todoListLength = document.getElementById("todo-list-length");
 
 function storedTodoList() {
