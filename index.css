@@ -48,19 +48,6 @@ body .container .project-container {
   box-shadow: 0px 4px 16px #2e302c;
   width: 500px;
   margin: auto;
-  min-height: 800px;
-}
-body .container .project-container .badge {
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  background-color: #f0dc4e;
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-body .container .project-container .badge p {
-  color: #2e302c;
-  font-weight: bold;
 }
 body .container .project-container .title {
   display: flex;
@@ -77,74 +64,52 @@ body .container .project-container .title h2 {
   color: #f0dc4e;
   text-transform: uppercase;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 body .container .project-container .content {
   margin-top: 40px;
   padding: 10px;
   color: #f0dc4e;
 }
-body .container .project-container .content .form {
+body .container .project-container .content form {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  margin-top: 40px;
 }
-body .container .project-container .content .form input {
-  flex: 1;
+body .container .project-container .content form input {
   font-size: 17px;
   padding: 10px;
   border-radius: 4px;
   border: none;
   outline: none;
+  flex: 1;
 }
-body .container .project-container .content .form button {
+body .container .project-container .content form button {
   font-size: 17px;
   padding: 10px;
   border-radius: 4px;
-  margin-left: 10px;
   border: none;
   outline: none;
   background-color: #f0dc4e;
   color: #2e302c;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.5s;
+  margin-left: 20px;
 }
-body .container .project-container .content ul {
-  margin-top: 20px;
-  list-style: none;
-}
-body .container .project-container .content ul .checked {
-  text-decoration: line-through;
-  border-bottom: 1px solid green;
-}
-body .container .project-container .content ul li {
-  width: 100%;
-  flex-direction: row;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #f0dc4e;
-  border-bottom: 1px solid #f0dc4e;
-  padding: 10px;
+body .project-container::before {
+  content: "Project 1";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background-color: #f0dc4e;
+  padding: 5px 10px;
   border-radius: 4px;
-  margin-bottom: 10px;
-}
-body .container .project-container .content ul li .icon {
-  overflow: hidden;
-}
-body .container .project-container .content ul li .icon span {
-  margin-left: 10px;
   color: #2e302c;
-  padding: 5px;
-  cursor: pointer;
-  color: white;
-}
-body .container .project-container .content ul li .icon span:nth-child(1) {
-  background-color: green;
-}
-body .container .project-container .content ul li .icon span:nth-child(2) {
-  background-color: red;
+  font-weight: bold;
 }
 body .footer {
   border-top: 1px solid #2e302c;

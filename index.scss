@@ -26,9 +26,28 @@ $doubleMarginTop: 40px;
   justify-content: space-between;
 }
 
+@mixin buttonStyle {
+  font-size: 17px;
+  padding: 10px;
+  border-radius: $raduis;
+  @include borderNoutline;
+  background-color: $bgColorH;
+  color: $colorH;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
 @mixin borderNoutline {
   border: none;
   outline: none;
+}
+
+@mixin inputStyle {
+  font-size: 17px;
+  padding: 10px;
+  border-radius: $raduis;
+  @include borderNoutline;
 }
 
 * {
@@ -76,25 +95,10 @@ body {
       box-shadow: $shadowG;
       width: 500px;
       margin: auto;
-      min-height: 800px;
-      .badge {
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        background-color: $bgColorH;
-        padding: 5px 10px;
-        border-radius: $raduis;
-        // box-shadow: $shadowY;
-        p {
-          color: $colorH;
-          font-weight: bold;
-        }
-      }
       .title {
         @include flexBetween;
         flex-direction: row;
         margin-top: $marginTop;
-
         img {
           width: 50px;
           border-radius: 50%;
@@ -103,71 +107,39 @@ body {
           color: $bgColorH;
           text-transform: uppercase;
           font-size: 20px;
+          user-select: none;
         }
       }
       .content {
         margin-top: $marginTop * 2;
         padding: 10px;
         color: $bgColorH;
-        .form {
+
+        form {
+          width: 100%;
           @include flexBetween;
-          flex-direction: row;
-          margin-top: $doubleMarginTop;
           input {
+            @include inputStyle;
             flex: 1;
-            font-size: 17px;
-            padding: 10px;
-            border-radius: $raduis;
-            @include borderNoutline;
           }
           button {
-            font-size: 17px;
-            padding: 10px;
-            border-radius: $raduis;
-            margin-left: 10px;
-            @include borderNoutline;
-            background-color: $bgColorH;
-            color: $colorH;
-            font-weight: bold;
-            cursor: pointer;
-          }
-        }
-        ul {
-          margin-top: $marginTop;
-          list-style: none;
-          .checked {
-            text-decoration: line-through;
-            border-bottom: 1px solid green;
-          }
-          li {
-            width: 100%;
-            flex-direction: row;
-            @include flexBetween;
-            color: $bgColorH;
-            border-bottom: 1px solid $bgColorH;
-            padding: 10px;
-            border-radius: $raduis;
-            margin-bottom: 10px;
-            .icon {
-              overflow: hidden;
-              span {
-                margin-left: 10px;
-                color: $colorH;
-                padding: 5px;
-                cursor: pointer;
-                color: white;
-              }
-              span:nth-child(1) {
-                background-color: green;
-              }
-              span:nth-child(2) {
-                background-color: red;
-              }
-            }
+            @include buttonStyle;
+            margin-left: $marginTop;
           }
         }
       }
     }
+  }
+  .project-container::before {
+    content: "Project 1";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: $bgColorH;
+    padding: 5px 10px;
+    border-radius: $raduis;
+    color: $colorH;
+    font-weight: bold;
   }
   .footer {
     border-top: 1px solid $colorH;

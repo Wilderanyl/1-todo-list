@@ -3,39 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Core</title>
+    <title>Todo list</title>
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <header class="header">
-        <p>We don't know enough but, we're satisfied with it.</p>
+      <p>We don't know enough but, we're satisfied with it.</p>
     </header>
     <div class="container">
       <div class="project-container">
-        <div class="badge">
-          <p>Project 1</p>
-        </div>
         <div class="title">
-          <img src="/images/js.png" alt="js logo" />
+          <a href="https://www.javascript.com/" target="_blank">
+            <img src="/images/js.png" alt="js logo" />
+          </a>
           <h2>Todo List</h2>
         </div>
         <div class="content">
-          <div class="form">
-            <input type="text" placeholder="create something" id="input" autocomplete="off">
-            <button id="button">save</button>
-          </div>
-          <ul id="todo-list">
-
-          </ul>
-          <p class="add-length">Total : <span id="todo-list-length"></span>
-            items
-        </p>
+          <form>
+            <input type="text" placeholder="write something...">
+            <button type="submit">Save</button>
+          </form>
         </div>
       </div>
     </div>
     <footer class="footer">
       <a href="https://github.com/Wilderanyl" target="_blank"
-        >@2023 Wilderanyl</a>
+        >@2023 Wilderanyl</a
+      >
     </footer>
     <script src="/index.js"></script>
   </body>
